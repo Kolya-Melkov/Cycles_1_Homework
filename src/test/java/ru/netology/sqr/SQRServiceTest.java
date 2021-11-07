@@ -3,7 +3,6 @@ package ru.netology.sqr;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
-
 class SQRServiceTest {
     @ParameterizedTest
     @CsvSource(value = {"'Standart bounds', 200, 300, 3",
@@ -16,7 +15,7 @@ class SQRServiceTest {
     })
     void checkSquares(String testName, int lowBound, int upperBound, int expected) {
         SQRService service = new SQRService();
-        int actual = service.countNumberOfBounds(lowBound, upperBound);
+        int actual = service.countNumberOfSquares(lowBound, upperBound);
         assertEquals(expected, actual);
     }
 }
